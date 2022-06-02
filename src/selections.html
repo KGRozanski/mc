@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>🌎 WorldEdit Help</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<h1>🌎 WorldEdit Help</h1>
+
+        <nav>
+            <ol>
+                <a href="index.html"><li>Home</li></a>
+                <a href="selections.html"><li>Selections</li></a>
+                <a href="brushes.html"><li>Brushes</li></a>
+                <a href="formulas.html"><li>Formulas</li></a>
+                <a href="miscellaneous.html"><li>Miscellaneous</li></a>
+            </ol>
+        </nav>
+
+        <h2>Selections</h2>
+        
+		<h3>Rozszerz (expand) zaznaczenie:</h3>
+		<p>
+
+            ↑ góra: (*skrót: u) <br>
+            <code>
+                //expand 10 up
+            </code><br>
+			↓ dół: (*skrót: d) <br>
+            <code>
+                //expand 10 down
+            </code>
+
+            <br><br>
+
+            🧭 Róża wiatrów: <br><br>
+            east (e) - wschód, <br>
+            west (w) - zachód, <br>
+            north (n) - północ, <br>
+			south (s) - południe <br>
+            <br>
+            <span>Nie działa kompas?</span>
+            <span style="font-size: 12px;">(Usuń brush jeśli ustawiłeś na nim (patrz brushe))</span><br>
+            <code>
+                /navwand
+            </code>
+		</p>
+
+        <h3>🧼 Usuń zaznaczenie:</h3>
+        <p>
+            <code>//sel</code>
+        </p>
+
+        <h3>Zaznaczaj poligony:</h3>
+        <p>
+            <code>//sel poly</code>
+        </p>
+        
+        <h3>Ustaw punkty zaznaczenia celownikiem:</h3>
+        <p>
+            <code>
+                //pos1
+            </code><br>
+            <code>
+                //pos2
+            </code>
+        </p>
+
+		<h2>Outset & inset:</h2>
+        <p>
+            <span>powiększa lub pomniejsza zaznaczenie po obwodzie</span><br>
+
+            <code>//outset 5</code> <br>
+            <code>//inset 5</code>
+        
+            <br>
+		
+            (parametry): <br>
+            -h : tylko horyzontalnie ←→ <br>
+            -v : tylko vertykalnie ↕
+		</p>
+
+
+        <h3>Wizualizacja zaznaczenia:</h3>
+        <p>
+            <span>Włącz/wyłącz</span><br>
+            <code>
+                /wesv toggle
+            </code>
+        </p>
+
+        <h3>Wizualizacja schowka:</h3>
+        <p>
+            <span>Włącz/wyłącz</span><br>
+            <code>
+                /wesv toggle clipboard
+            </code>
+        </p>
+
+        <h3>Środek zaznaczenia:</h3>
+        <p>
+            <span>Wyznacza środek zaznaczenia czerwoną wełną</span><br>
+            <code>
+                //center 35:14
+            </code>
+        </p>
+
+        <h3>Lista zaznaczania:</h3>
+        <p>
+            <code>
+                //sel list
+            </code>
+        </p>
+
+        <h3>Stwórz klocek referencyjny pod sobą:</h3>
+        <p>
+            <code>/up 0</code>
+        </p>
+
+		<script src="bundle.js"></script>
+	</body>
+</html>

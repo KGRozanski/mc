@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>🌎 WorldEdit Help</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<h1>🌎 WorldEdit Help</h1>
+
+        <nav>
+            <ol>
+                <a href="index.html"><li>Home</li></a>
+                <a href="selections.html"><li>Selections</li></a>
+                <a href="brushes.html"><li>Brushes</li></a>
+                <a href="formulas.html"><li>Formulas</li></a>
+				<a href="miscellaneous.html"><li>Miscellaneous</li></a>
+            </ol>
+        </nav>
+
+        <h2>Formulas</h2>
+        
+		<h3>Maska na florę (drzewa, paprotki, trawa kwiatki):</h3>
+        <p>
+            <code id="code">//mask 17,17:1,17:2,17:3,17:4,18,18:1,18:2,18:3,18:4,31:1,175:2,31:2,175:3,157,32,37,38,38:1,38:2,38:,38:4,38:5,38:6,38:7,38:8,39,40,106,162,acacia_leaves,dark_oak_leaves,dark_oak_log,red_mushroom_block,mushroom_stem,lily_of_the_valley,brown_mushroom_block</code>
+        </p>
+
+		<h3>Budowanie krzywej drogi:</h3>
+        <p>
+			<span>
+				<ol>
+					<li>
+						Zbuduj  drogê d³ugoœci jednego klocka i dowolnej szerokoœci (np. z chodnikiem)
+					</li>
+					<li>
+						Zaznacz zbudowany fragment
+					</li>
+					<li>
+						<code>//copy</code>
+					</li>
+					<li>
+						<code>//br sweep</code><br>
+					</li>
+					<li>
+						Zaznacz ścieżkę drogi na koñcu kliknij dwukrotnie w ten sam klocek
+					</li>
+				</ol>
+			</span>
+
+        </p>
+
+		<h3>Wstaw półpłytki górne:</h3>
+        <p>
+            <code>//set minecraft:smooth_stone_slab[type=top]</code>
+        </p>
+
+		<h3>Wstaw blok w konkretnej orientacji:</h3>
+        <p>
+            <code>//set minecraft:oak_log[axis=z]</code>
+        </p>
+
+        <h3>Generuj szachownicę:</h3>
+        <p>
+			<span>(musisz być zwrócony w stronę 'south' i przed zaznaczeniem)</span><br>
+            <code>//generate -ho 35 ((x%2)+z)%2==1</code>
+        </p>
+
+		<h3>Deformuj teren:</h3>
+        <p>
+			<span>
+				y -= expression == ↑ (up)<br>
+				y = expression == ↓ (down)
+			</span><br>
+            <code>//brush deform <height> cyl y=log(2)</code>
+        </p>
+
+		<h3>Generuj hollow (pusty) cylinder/elipsę:</h3>
+        <p>
+            <code>//hcyl glass 10,15 10</code>
+		</p>
+
+		<h3>Generuj rondo:</h3>
+		<span>gdy pomnożymy cosinus dostaniemy border</span>
+        <p>
+            <code>//g -h 35:15 cos(sqrt(x^2+z^2)*5)/2</code>
+		</p>
+
+		<h3>Podmień blok zachowując orientację:</h3>
+        <p>
+            <code>//replace minecraft:oak_stairs ^minecraft:acacia_stairs</code>
+        </p>
+
+		<h3>Generowanie góry na podst. mapy wysokoœci:</h3>
+        <p>
+            <code>/brush height 50 https://i.imgur.com/JoSyq0z.png 0.1 0.7 -r</code>
+        </p>
+
+		<h3>Połącz dwie linie convex płaszczem z kolcków:</h3>
+        <p>
+            <code>//br spline [id] [radius]</code>
+        </p>
+
+		<h3>Łańcuch / linia nośna:</h3>
+        <p>
+            <code>//br catenary [item] [thickness]</code>
+        </p>
+
+		<h3>Kliknij i kopiuj</h3>
+		<span>
+			(shift + LPM for clear) <br>
+			If odd try use bigger brush /size [size]
+		</span>
+        <p>
+            <code>/br copypaste  -r -a </code>
+        </p>
+
+
+		<script src="bundle.js"></script>
+	</body>
+</html>

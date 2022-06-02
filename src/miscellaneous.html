@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>🌎 WorldEdit Help</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<h1>🌎 WorldEdit Help</h1>
+
+        <nav>
+            <ol>
+                <a href="index.html"><li>Home</li></a>
+                <a href="selections.html"><li>Selections</li></a>
+                <a href="brushes.html"><li>Brushes</li></a>
+                <a href="formulas.html"><li>Formulas</li></a>
+                <a href="miscellaneous.html"><li>Miscellaneous</li></a>
+            </ol>
+        </nav>
+
+        <h2>Miscellaneous</h2>
+
+
+        <h3>Przenoszenie budowli do innych światów:</h3>
+        <p>
+            <code>//copy</code><br>
+            <code>//schematic save [filename]</code><br>
+            <code>//schematic load [filename]</code><br>
+            <code>//paste</code>
+        </p>
+
+        
+        <h3>Zarżnij wszystkie świnie/wózki w okolicy:</h3>
+        <p>
+            <code>
+                /kill @e[type=minecraft:pig]
+            </code>
+            <code>
+                /kill @e[type=minecart,r=5]
+            </code>
+        </p>
+
+        <h3>Przyzywanie wózka:</h3>
+        <p>
+            <code>
+                /summon minecraft:minecart x y z
+            </code>
+        </p>
+
+        <h3>🦄 Super koń:</h3>
+        <p>
+            <code>
+                /summon minecraft:horse ~ ~ ~ {Variant:515,SaddleItem:{id:saddle,Count:1},Tame:1,Health:100,Glowing:1,PersistenceRequired:1,Attributes:[{Name:"generic.armor",Base:100.0F},{Name:"generic.movement_speed",Base:.66F},{Name:"horse.jump_strength",Base:1.5F},{Name:"generic.armor_toughness",Base:20.0F},{Name:"generic.follow_range",Base:85.0F},{Name:"generic.max_health",Base:100F}]}
+            </code>
+        </p>
+
+		<script src="bundle.js"></script>
+	</body>
+</html>
