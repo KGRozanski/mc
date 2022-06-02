@@ -1,3 +1,70 @@
 body{
-    background: #4e4e4e;
+    background: #1d1d1d;
+    color: #fff;
+    font-family: 'Inconsolata', monospace;
 }
+
+p{
+    margin-left: 15px;
+}
+
+code{
+    font-size: 14px;
+    background: #000;
+    padding: 6px 12px;
+    border: 1px solid gray;
+    display: inline-block;
+    margin: 10px 0 10px 0;
+}
+
+span{
+    font-style: italic;
+}
+
+nav{
+    ol{
+        display: flex;
+        list-style: none;
+        padding: 0;
+
+        a{
+            color: #fff;
+            text-decoration: none;
+        }
+
+        li{
+            border: 1px solid #f2f2f2;
+            margin: 0 5px;
+            padding: 8px;
+
+            &:hover{
+                cursor: pointer;
+                background: #313131;
+            }
+        }
+    }
+}
+
+code:hover{
+    cursor: pointer;
+}
+
+#copy{
+    position: absolute;
+    cursor: default;
+    opacity: 0;
+}
+
+@keyframes hintShowup {
+    0% {opacity: 0;}
+    10% {opacity: .9;}
+    50% {opacity: 1;}
+    80% {opacity: .9;}
+    100% {opacity: 0;}
+}
+
+.showUp{
+    animation-name: hintShowup;
+    animation-duration: .1s;
+}
+
