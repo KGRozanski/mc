@@ -60,10 +60,6 @@ module.exports = {
                 {
                     from: "src/map.html",
                     to: ""
-                },
-                {
-                    from: "src/lorem.html",
-                    to: ""
                 }
             ]
         })
