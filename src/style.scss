@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 body{
     background: #1d1d1d;
     color: #fff;
@@ -6,6 +10,10 @@ body{
 
 p{
     margin-left: 15px;
+
+    a{
+        color: rgb(255, 251, 0);
+    }
 }
 
 code{
@@ -15,6 +23,12 @@ code{
     border: 1px solid gray;
     display: inline-block;
     margin: 10px 0 10px 0;
+    word-break: break-all;
+    max-width: 720px;
+
+    &:hover{
+        cursor: pointer;
+    }
 }
 
 span{
@@ -45,9 +59,6 @@ nav{
     }
 }
 
-code:hover{
-    cursor: pointer;
-}
 
 #copy{
     position: absolute;
@@ -65,6 +76,6 @@ code:hover{
 
 .showUp{
     animation-name: hintShowup;
-    animation-duration: .1s;
+    animation-duration: 1s;
 }
 

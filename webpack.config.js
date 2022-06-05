@@ -56,6 +56,14 @@ module.exports = {
                 {
                     from: "src/miscellaneous.html",
                     to: ""
+                },
+                {
+                    from: "src/map.html",
+                    to: ""
+                },
+                {
+                    from: "src/lorem.html",
+                    to: ""
                 }
             ]
         })
