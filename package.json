@@ -1,5 +1,5 @@
 {
-  "name": "world-edit-help",
+  "name": "mc-docs",
   "version": "1.0.0",
   "description": "CraftPlanet most common world edit commands and tips",
   "main": "index.js",
