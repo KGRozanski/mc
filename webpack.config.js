@@ -58,31 +58,31 @@ module.exports = {
                     to: ""
                 }, 
                 {
-                    from: "src/brushes.html",
+                    from: "src/pages/brushes.html",
                     to: ""
                 },
                 {
-                    from: "src/selections.html",
+                    from: "src/pages/selections.html",
                     to: ""
                 },
                 {
-                    from: "src/inspirations.html",
+                    from: "src/pages/inspirations.html",
                     to: ""
                 },
                 {
-                    from: "src/formulas.html",
+                    from: "src/pages/formulas.html",
                     to: ""
                 },
                 {
-                    from: "src/miscellaneous.html",
+                    from: "src/pages/miscellaneous.html",
                     to: ""
                 },
                 {
-                    from: "src/map.html",
+                    from: "src/pages/map.html",
                     to: ""
                 },
                 {
-                    from: "src/others.html",
+                    from: "src/pages/others.html",
                     to: ""
                 }
             ]

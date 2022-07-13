@@ -1,6 +1,6 @@
 {
   "name": "mc-docs",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "CraftPlanet most common world edit commands and tips",
   "main": "index.js",
   "private": true,
@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "node beforeBuild.js && webpack",
     "watch": "webpack --watch",
-    "start": "webpack serve --open Chrome.exe"
+    "start": "webpack serve"
   },
   "repository": {
     "type": "git",

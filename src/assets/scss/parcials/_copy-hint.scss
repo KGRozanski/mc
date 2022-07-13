@@ -1,0 +1,18 @@
+#copy{
+    position: absolute;
+    cursor: default;
+    opacity: 0;
+}
+
+@keyframes hintShowup {
+    0% {opacity: 0;}
+    10% {opacity: .9;}
+    50% {opacity: 1;}
+    80% {opacity: .9;}
+    100% {opacity: 0;}
+}
+
+.showUp{
+    animation-name: hintShowup;
+    animation-duration: 1s;
+}

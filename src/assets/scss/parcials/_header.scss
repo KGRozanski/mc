@@ -1,0 +1,28 @@
+#header{
+    min-height: 100px;
+
+    nav{
+        ol{
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            padding: 0;
+    
+            a{
+                color: #fff;
+                text-decoration: none;
+            }
+    
+            li{
+                border: 1px solid #f2f2f2;
+                margin: 0 5px 10px 5px;
+                padding: 8px;
+    
+                &:hover{
+                    cursor: pointer;
+                    background: #313131;
+                }
+            }
+        }
+    }
+}

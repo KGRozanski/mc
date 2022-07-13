@@ -1,0 +1,58 @@
+@import '../mixins/img-gallery';
+
+#gallery{
+    column-count: 4;
+    column-gap: 10px;
+
+    figure {
+        margin: 0;
+        display: grid;
+        grid-template-rows: 1fr auto;
+        margin-bottom: 10px;
+        break-inside: avoid;
+    }
+
+    figure > img {
+        grid-row: 1 / -1;
+        grid-column: 1;
+    }
+    
+    figure a {
+        color: black;
+        text-decoration: none;
+    }
+    
+    figcaption {
+        grid-row: 2;
+        grid-column: 1;
+        background-color: rgba(255,255,255,.5);
+        padding: .2em .5em;
+        justify-self: start;
+    }
+
+    @include img-gallery()
+
+}
+
+#othersGallery{
+    @include img-gallery()
+}
+
+@media only screen and (max-width: 576px) {
+    #gallery{
+        column-count: 1;
+    }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 970px) {
+    #gallery{
+        column-count: 2;
+    }
+}
+
+@media only screen and (min-width: 971px) and (max-width: 1170px) {
+    #gallery{
+        column-count: 3;
+    }
+}
+

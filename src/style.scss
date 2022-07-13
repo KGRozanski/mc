@@ -1,6 +1,12 @@
+@use './assets/scss/parcials/header';
+@use './assets/scss/parcials/gallery';
+@use './assets/scss/parcials/code-snippet';
+@use './assets/scss/parcials/copy-hint';
+
 *{
     box-sizing: border-box;
 }
+
 
 body{
     background: #1d1d1d;
@@ -16,140 +22,8 @@ p{
     }
 }
 
-code{
-    font-size: 14px;
-    background: #000;
-    padding: 6px 12px;
-    border: 1px solid gray;
-    display: inline-block;
-    margin: 10px 0 10px 0;
-    word-break: break-all;
-    max-width: 720px;
-
-    &:hover{
-        cursor: pointer;
-    }
-}
-
-span{
+.italic{
     font-style: italic;
-}
-
-
-
-
-#copy{
-    position: absolute;
-    cursor: default;
-    opacity: 0;
-}
-
-@keyframes hintShowup {
-    0% {opacity: 0;}
-    10% {opacity: .9;}
-    50% {opacity: 1;}
-    80% {opacity: .9;}
-    100% {opacity: 0;}
-}
-
-.showUp{
-    animation-name: hintShowup;
-    animation-duration: 1s;
-}
-
-
-
-#gallery{
-    column-count: 4;
-    column-gap: 10px;
-
-    
-
-    figure {
-        margin: 0;
-        display: grid;
-        grid-template-rows: 1fr auto;
-        margin-bottom: 10px;
-        break-inside: avoid;
-    }
-
-    figure > img {
-        grid-row: 1 / -1;
-        grid-column: 1;
-    }
-    
-    figure a {
-        color: black;
-        text-decoration: none;
-    }
-    
-    figcaption {
-        grid-row: 2;
-        grid-column: 1;
-        background-color: rgba(255,255,255,.5);
-        padding: .2em .5em;
-        justify-self: start;
-    }
-
-    
-    img{
-        min-width: 100%;
-        max-width: 100%;
-        display: block;
-    }
-}
-
-@media only screen and (max-width: 576px) {
-    #gallery{
-        column-count: 1;
-    }
-}
-
-@media only screen and (min-width: 577px) and (max-width: 970px) {
-    #gallery{
-        column-count: 2;
-    }
-}
-
-@media only screen and (min-width: 971px) and (max-width: 1170px) {
-    #gallery{
-        column-count: 3;
-    }
-}
-
-#othersGallery{
-    img{
-        max-width: 100%;
-    }
-}
-
-#header{
-    min-height: 100px;
-
-    nav{
-        ol{
-            display: flex;
-            flex-wrap: wrap;
-            list-style: none;
-            padding: 0;
-    
-            a{
-                color: #fff;
-                text-decoration: none;
-            }
-    
-            li{
-                border: 1px solid #f2f2f2;
-                margin: 0 5px 10px 5px;
-                padding: 8px;
-    
-                &:hover{
-                    cursor: pointer;
-                    background: #313131;
-                }
-            }
-        }
-    }
 }
 
 .links{
