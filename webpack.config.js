@@ -29,6 +29,18 @@ module.exports = {
                     "sass-loader"
                 ]
             },
+            {
+                test: /\.(gif|png|jpe?g|svg)$/i,
+                use: [
+                    'file-loader',
+                    {
+                        loader: 'image-webpack-loader',
+                        options: {
+                            disable: false, // webpack@2.x and newer
+                        },
+                    },
+                    ],
+                }
         ]
     },
     resolve: {
@@ -37,6 +49,10 @@ module.exports = {
     plugins: [
         new CopyPlugin({
             patterns: [
+                {
+                    from: "src/assets/img",
+                    to: "images"
+                },
                 {
                     from: "src/index.html",
                     to: ""
@@ -50,6 +66,10 @@ module.exports = {
                     to: ""
                 },
                 {
+                    from: "src/inspirations.html",
+                    to: ""
+                },
+                {
                     from: "src/formulas.html",
                     to: ""
                 },
@@ -59,6 +79,10 @@ module.exports = {
                 },
                 {
                     from: "src/map.html",
+                    to: ""
+                },
+                {
+                    from: "src/others.html",
                     to: ""
                 }
             ]

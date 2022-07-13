@@ -1,12 +1,12 @@
 {
   "name": "world-edit-help",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "CraftPlanet most common world edit commands and tips",
   "main": "index.js",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
+    "build": "node beforeBuild.js && webpack",
     "watch": "webpack --watch",
     "start": "webpack serve --open Chrome.exe"
   },
@@ -20,7 +20,6 @@
     "url": "https://github.com/KGRozanski/world-edit-help/issues"
   },
   "homepage": "https://github.com/KGRozanski/world-edit-help#readme",
-  "dependencies": {},
   "devDependencies": {
     "copy-webpack-plugin": "^7.0.0",
     "css-loader": "^5.0.1",
