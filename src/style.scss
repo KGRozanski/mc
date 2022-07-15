@@ -1,29 +1,31 @@
 @use './assets/scss/parcials/header';
+@use './assets/scss/parcials/footer';
 @use './assets/scss/parcials/gallery';
 @use './assets/scss/parcials/code-snippet';
 @use './assets/scss/parcials/copy-hint';
+@use './assets/scss/abstracts';
+@use './assets/scss/mixins/global-bg-gradient.mixin' as bg;
 
 *{
     box-sizing: border-box;
 }
-
+html{
+    overflow-x: hidden;
+    @include bg.global-bg-gradient();
+}
 
 body{
-    background: #1d1d1d;
-    color: #fff;
+    color: abstracts.$main-font-color;
     font-family: 'Inconsolata', monospace;
+
 }
 
 p{
     margin-left: 15px;
 
     a{
-        color: rgb(255, 251, 0);
+        color: abstracts.$link-color;
     }
-}
-
-.italic{
-    font-style: italic;
 }
 
 .links{

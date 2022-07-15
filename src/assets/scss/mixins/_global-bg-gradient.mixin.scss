@@ -1,0 +1,6 @@
+@mixin global-bg-gradient() {
+    background: linear-gradient(0deg, rgba(29,29,29,1) 0%, rgba(29,29,29,1) 80%, rgb(44, 44, 44) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(29,29,29);
+}

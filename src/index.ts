@@ -1,6 +1,7 @@
 import "./style.scss";
 import {inspirations, others} from './assets/js/images';
 import HEADER from "./assets/js/components/header";
+import FOOTER from "./assets/js/components/footer";
 let copy: any;
 
 const codes: Array<HTMLElement> = Array.prototype.slice.call(
@@ -17,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	addCopyHintEventListener();
 	renderHeader();
+	renderFooter();
 	renderGallery('gallery');
 	renderGallery('othersGallery');
 });
@@ -95,4 +97,7 @@ function renderGallery(name: string) {
 
 function renderHeader() {
 	document.getElementById('header').insertAdjacentHTML("beforeend", HEADER);
+}
+function renderFooter() {
+	document.getElementById('footer').insertAdjacentHTML("beforeend", FOOTER);
 }
