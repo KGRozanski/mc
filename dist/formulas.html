@@ -20,26 +20,33 @@
 
 			gtag('config', 'G-SKZJH0R8FJ');
 		</script>
-	</head>
+	<script defer src="bundle.43103eb4b13794dc281f.js"></script></head>
 	<body>
         <div id="header"></div>
 
         <h2>Formulas</h2>
-        
-		<h3>Maska na florę (drzewa, paprotki, trawa kwiatki):</h3>
+
+		<div class="warn-box">
+			<i class="icon">ℹ️</i> Not every command would work without FAWE version of WorldEdit – check links section at homepage
+		</div>
+
+        <h3>Get rid of all grass and flora:</h3>
+		<span class="italic">Just use with brush set on 0. Removes grass/tall grass, flowers, leaves of any kind, and more!</span><br>
         <p>
             <code id="code">//mask 17,17:1,17:2,17:3,17:4,18,18:1,18:2,18:3,18:4,31:1,175:2,31:2,175:3,157,32,37,38,38:1,38:2,38:3,38:4,38:5,38:6,38:7,38:8,39,40,106,162,161,161:1,162:1,100,mushroom_stem,lily_of_the_valley,brown_mushroom_block</code>
         </p>
 
-		<h3>Budowanie krzywej drogi:</h3>
+		<h3>Generating curved road:</h3>
         <p>
 			<span class="italic">
 				<ol>
 					<li>
-						Zbuduj  drogê d³ugoœci jednego klocka i dowolnej szerokoœci (np. z chodnikiem)
+						First build cross section of a road 1,2 or 3 blocks depth <span class="italic">(higher depths can vastly decrease performance ⚠️)</span>
+						<img class="tutorial-img" src="images/curved-road-1.jpg" alt="curved road minecraft">
 					</li>
 					<li>
-						Zaznacz zbudowany fragment
+						Select created fragment
+						<img class="tutorial-img" src="images/curved-road-2.jpg" alt="selected curved road minecraft">
 					</li>
 					<li>
 						<code>//copy</code>
@@ -48,30 +55,39 @@
 						<code>//br sweep</code><br>
 					</li>
 					<li>
-						Zaznacz ścieżkę drogi na koñcu kliknij dwukrotnie w ten sam klocek
+						Select road path by clicking left or right mouse button on every point it follows. It can handle even change in elevation.<br>
+						<span class="italic">(If you are familiar with photoshop pen tool, it's good. This command works similar to it, <br>and well as its equivalent requires a little bit of practice.)</span>
+						<img class="tutorial-img" src="images/curved-road-3.jpg" alt="selected curved road minecraft">
+					</li>
+					<li>
+						Click twice on last point to join
+						<img class="tutorial-img" src="images/curved-road-4.jpg" alt="joined curved road minecraft">
+						<br>
+						<span class="italic">(This technique while using more than 1 block of height can be used to generate curved tunnel, bridge or cannal!)</span>
 					</li>
 				</ol>
 			</span>
 
         </p>
 
-		<h3>Wstaw półpłytki górne:</h3>
+		<h3>Place upper slabs:</h3>
         <p>
             <code>//set minecraft:smooth_stone_slab[type=top]</code>
         </p>
 
-		<h3>Wstaw blok w konkretnej orientacji:</h3>
+		<h3>Place a block in any orientation:</h3>
+		<span class="italic">blocks like Oak Log can be placed in different directions</span>
         <p>
             <code>//set minecraft:oak_log[axis=z]</code>
         </p>
 
-        <h3>Generuj szachownicę:</h3>
+        <h3>Generate chessboard:</h3>
         <p>
-			<span class="italic">(musisz być zwrócony w stronę 'south' i przed zaznaczeniem)</span><br>
+			<span class="italic">(works only if you faceing 'south' ⚠️)</span><br>
             <code>//generate -ho 35 ((x%2)+z)%2==1</code>
         </p>
 
-		<h3>Deformuj teren:</h3>
+		<h3>Deform terrain:</h3>
         <p>
 			<span class="italic">
 				y -= expression == ↑ (up)<br>
@@ -80,38 +96,42 @@
             <code>//brush deform <height> cyl y=log(2)</code>
         </p>
 
-		<h3>Generuj hollow (pusty) cylinder/elipsę:</h3>
+		<h3>Generate hollow cylinder/ellipse:</h3>
         <p>
             <code>//hcyl glass 10,15 10</code>
 		</p>
 
-		<h3>Generuj rondo:</h3>
-		<span class="italic">gdy pomnożymy cosinus dostaniemy border</span>
+		<h3>Generate roundabout:</h3>
+		<span class="italic">if we multiply the cosine, we get a border</span>
         <p>
             <code>//g -h 35:15 cos(sqrt(x^2+z^2)*5)/2</code>
 		</p>
 
-		<h3>Podmień blok zachowując orientację:</h3>
+		<h3>Replace the blocks while preserving their orientation:</h3>
         <p>
             <code>//replace minecraft:oak_stairs ^minecraft:acacia_stairs</code>
         </p>
 
-		<h3>Generowanie góry na podst. mapy wysokoœci:</h3>
+		<h3>Generate mountains based on height map:</h3>
         <p>
-            <code>/brush height 50 https://i.imgur.com/JoSyq0z.png 0.1 0.7 -r</code>
+            <code>/brush height 50 https://i.imgur.com/JoSyq0z.png 0.1 0.7 -r</code><br>
+			<img class="tutorial-img" src="images/height-map.jpg" alt="height map example">
         </p>
 
-		<h3>Połącz dwie linie convex płaszczem z kolcków:</h3>
+		<h3>Cover two lines with plane of blocks:</h3>
         <p>
-            <code>//br spline [id] [radius]</code>
+			<span>(blocks cannot be connected only by corners in the first step)</span><br>
+            <code>//br spline [id] [radius]</code><br>
+			<img class="tutorial-img" src="images/spline-1.jpg" alt="over two lines with plane of blocks">
         </p>
 
-		<h3>Łańcuch / linia nośna:</h3>
+		<h3>Sagging rope:</h3>
         <p>
-            <code>//br catenary [item] [thickness]</code>
+            <code>//br catenary 35:4 1.1 0</code>
+			<img class="tutorial-img" src="images/catenery.jpg" alt="br catenery">
         </p>
 
-		<h3>Kliknij i kopiuj</h3>
+		<h3>Click and copy:</h3>
 		<span class="italic">
 			(shift + LPM for clear) <br>
 			If odd try use bigger brush /size [size]
@@ -121,6 +141,5 @@
         </p>
 
 		<div id="footer"></div>
-		<script src="bundle.js"></script>
 	</body>
 </html>

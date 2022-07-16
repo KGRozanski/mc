@@ -1,4 +1,23 @@
 #footer{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    margin: 20px 0;
+    min-height: 150px;
+    padding-top: 50px;
+    background-image: url("/src/assets/img/bg-footer.jpg");
+
+
+    &:after{
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 100;
+        background: linear-gradient(180deg, rgba(29,29,29,1) 0%, rgba(64,64,64,0) 56%);
+    }
 }

@@ -1,7 +1,8 @@
 import "./style.scss";
-import {inspirations, others} from './assets/js/images';
+import { inspirations, archivas } from './assets/js/img';
 import HEADER from "./assets/js/components/header";
 import FOOTER from "./assets/js/components/footer";
+
 let copy: any;
 
 const codes: Array<HTMLElement> = Array.prototype.slice.call(
@@ -12,7 +13,7 @@ const codes: Array<HTMLElement> = Array.prototype.slice.call(
 document.addEventListener("DOMContentLoaded", function() {
 	let div = document.createElement("div");
 	div.id = "copy";
-	div.textContent = "Skopiowano!";
+	div.textContent = "Copied!";
 	document.body.appendChild(div);
 	copy = div;
 
@@ -20,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	renderHeader();
 	renderFooter();
 	renderGallery('gallery');
-	renderGallery('othersGallery');
+	renderGallery('archivasGallery');
 });
 
 function addCopyHintEventListener() {
@@ -50,7 +51,7 @@ codes.forEach((code: HTMLElement) => {
 
 function renderGallery(name: string) {
 	const GALLERY = document.getElementById(name);
-	const OTHERS_GALLERY = document.getElementById(name);
+	const ARCHIVAS_GALLERY = document.getElementById(name);
 	let tmpl = '';
 
 
@@ -70,7 +71,7 @@ function renderGallery(name: string) {
 		for (let file of sortedInspirations) {
 			tmpl += `
 				<figure>
-					<img src="/images/inspirations/${file}">
+					<img src="images/inspirations/${file}">
 					<figcaption>${file}</figcaption>
 				</figure>
 				`;
@@ -79,11 +80,11 @@ function renderGallery(name: string) {
 		GALLERY.insertAdjacentHTML("beforeend", tmpl);
 	}
 
-	if(OTHERS_GALLERY && name === "othersGallery") {
-		for (let file of others) {
+	if(ARCHIVAS_GALLERY && name === "archivasGallery") {
+		for (let file of archivas) {
 			tmpl += `
 				<figure>
-					<img src="/images/others/${file}">
+					<img src="images/archivas/${file}">
 					<figcaption>${file}</figcaption>
 				</figure>
 				`;

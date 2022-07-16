@@ -1,6 +1,6 @@
 const fs = require('fs');
 const inspirationsDIR = './src/assets/img/inspirations';
-const othersDIR = './src/assets/img/others';
+const othersDIR = './src/assets/img/archivas';
 
 let output = '';
 
@@ -28,12 +28,12 @@ fs.readdir(othersDIR, (err, files) => {
 
         if (!--iterations) {
             arrayAsString += ']'
-            output += `let others = ${arrayAsString}; export {inspirations, others};`;
+            output += `let archivas = ${arrayAsString}; export {inspirations, archivas};`;
         } else {
             arrayAsString += ','
         }
     }
-    fs.writeFile('./src/assets/js/images.js', output, function (err) {
+    fs.writeFile('./src/assets/js/img.js', output, function (err) {
         if (err) return console.log(err);
         console.log('Successfully exported images names');
     })

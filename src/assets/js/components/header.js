@@ -10,7 +10,7 @@ const HEADER = `
                 <a href="brushes.html"><li>⛏️ Brushes</li></a>
                 <a href="formulas.html"><li>⚗️ Formulas</li></a>
                 <a href="miscellaneous.html"><li>🪐 Miscellaneous</li></a>
-                <a href="others.html"><li>📜 Archivas</li></a>
+                <a href="archivas.html"><li>📜 Archivas</li></a>
             </ol>
         </nav>
 `;
