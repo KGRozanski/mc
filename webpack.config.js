@@ -99,6 +99,10 @@ module.exports = {
 					from: "src/assets/img/archivas",
 					to: "images/archivas",
 				},
+				{
+					from: "src/assets/img/home",
+					to: "images/home",
+				}
 			],
 		}),
 	],

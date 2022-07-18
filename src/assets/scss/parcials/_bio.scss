@@ -1,0 +1,23 @@
+.bio{
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid;
+    padding: 0 20px;
+    max-width: 900px;
+    background-color: #2a6197;
+
+    .desc{
+        max-width: 608px;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    img{
+        display: block;
+        max-width: 200px;
+        border-radius: 50%;
+        margin: 20px 0 20px 50px;
+    }
+}
