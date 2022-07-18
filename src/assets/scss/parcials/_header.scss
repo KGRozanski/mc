@@ -6,12 +6,27 @@
     background-repeat: no-repeat;
 
     h1{
+        float: left;
         margin-top: 0;
         position: relative;
         left: -6px;
     }
 
+    .serverIp{
+        display: inline-block;
+        margin: 7px 0 0 30px;
+        border: 1px solid #00d26a;
+        border-radius: 6px;
+        padding: 5px 10px;
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
     nav{
+        clear: both;
+
         ol{
             display: flex;
             flex-wrap: wrap;

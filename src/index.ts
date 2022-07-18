@@ -7,7 +7,9 @@ let copy: any;
 
 const codes: Array<HTMLElement> = Array.prototype.slice.call(
 	document.getElementsByTagName("code")
+
 );
+
 
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -98,7 +100,20 @@ function renderGallery(name: string) {
 
 function renderHeader() {
 	document.getElementById('header').insertAdjacentHTML("beforeend", HEADER);
+	addClickOnIpListener();
 }
 function renderFooter() {
 	document.getElementById('footer').insertAdjacentHTML("beforeend", FOOTER);
+}
+
+function addClickOnIpListener() {
+	document.querySelector('.serverIp').addEventListener("click", (e: Event & { target: HTMLElement }) => {
+		navigator.clipboard.writeText( 'play.krdevelop.pl').then(() => {
+			copy.classList.add("showUp");
+
+			setTimeout(() => {
+				copy.classList.remove("showUp");
+			}, 1000);
+		});
+	});
 }

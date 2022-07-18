@@ -1,6 +1,6 @@
 const HEADER = `
         <h1>🌎 Mc'Docs</h1>
-
+        <div class="serverIp"><span class="ip">play.krdevelop.pl</span> 🟢 ONLINE</div>
         <nav>
             <ol>
                 <a href="index.html"><li>🏠 Home</li></a>
