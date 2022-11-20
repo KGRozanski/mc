@@ -1,12 +1,13 @@
 {
   "name": "mc-docs",
-  "version": "1.8.0",
+  "version": "1.9.0",
   "description": "CraftPlanet most common world edit commands and tips",
   "main": "index.js",
   "private": true,
   "scripts": {
+    "cleandist": "rimraf ./dist",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node beforeBuild.js && webpack",
+    "build": "npm run cleandist && node beforeBuild.js && webpack",
     "watch": "webpack --watch",
     "start": "webpack serve"
   },
@@ -36,5 +37,8 @@
     "webpack": "^5.73.0",
     "webpack-cli": "^4.2.0",
     "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "rimraf": "^3.0.2"
   }
 }
