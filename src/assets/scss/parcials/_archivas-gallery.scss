@@ -1,0 +1,21 @@
+@use '../abstracts/variables';
+
+#archivasGallery{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+}
+
+.archivePhotoLink{
+    display: block;
+    text-decoration: none;
+    transition: border 0.1618s ease-out;
+    padding: 5px;
+
+    &:hover{
+        border: 1px solid variables.$main-font-color;
+    }
+
+    figcaption{
+        color: variables.$main-font-color;
+    }
+}

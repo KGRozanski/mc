@@ -85,10 +85,12 @@ function renderGallery(name: string) {
 	if(ARCHIVAS_GALLERY && name === "archivasGallery") {
 		for (let file of archivas) {
 			tmpl += `
-				<figure>
-					<img src="images/archivas/${file}">
-					<figcaption>${file}</figcaption>
-				</figure>
+					<figure>
+						<a class="archivePhotoLink" target="_blank" href="images/archivas/${file}"> 
+							<img src="images/archivas/${file}">
+							<figcaption>${file}</figcaption>
+						</a>
+					</figure>
 				`;
 		}
 
