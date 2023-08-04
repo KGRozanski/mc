@@ -1,6 +1,6 @@
 {
   "name": "mc-docs",
-  "version": "1.11.0",
+  "version": "1.12.0",
   "description": "CraftPlanet most common world edit commands and tips",
   "main": "index.js",
   "private": true,
