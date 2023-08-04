@@ -4,7 +4,8 @@ const othersDIR = './src/assets/img/archivas';
 
 let output = '';
 
-fs.readdir(inspirationsDIR, (err, files) => {
+fs.readdirSync(inspirationsDIR, (err, files) => {
+
     let iterations = files.length;
     let arrayAsString = '[';
     for (file of files) {
@@ -16,11 +17,12 @@ fs.readdir(inspirationsDIR, (err, files) => {
         } else {
             arrayAsString += ','
         }
+
     }
 });
 
 
-fs.readdir(othersDIR, (err, files) => {
+fs.readdirSync(othersDIR, (err, files) => {
     let iterations = files.length;
     let arrayAsString = '[';
     for (file of files) {
